@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Batman Azteca</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #121212;
+      color: #fff;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: auto;
+      padding: 15px;
+    }
+
+    /* Reproductor en 16:9 */
+    .video-container {
+      position: relative;
+      padding-top: 56.25%; /* Relación 16:9 */
+      margin-bottom: 20px;
+    }
+
+    .video-container iframe {
+      position: absolute;
+      top: 0; 
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border: none;
+      border-radius: 10px;
+    }
+
+    .card {
+      background: #1e1e1e;
+      border-radius: 12px;
+      padding: 20px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.5);
+      margin-bottom: 20px; /* separación entre bloques */
+    }
+
+    /* Contenedor de póster + info */
+    .card-header {
+      display: flex;
+      gap: 15px;
+      align-items: flex-start;
+    }
+
+    .card-header img {
+      width: 150px;
+      border-radius: 8px;
+      flex-shrink: 0;
+    }
+
+    .card-info {
+      flex: 1;
+    }
+
+    .card-info h2 {
+      margin: 0;
+      font-size: 1.5rem;
+    }
+
+    /* Estrellas minimalistas */
+    .rating {
+      display: flex;
+      align-items: center;
+      margin: 8px 0;
+      gap: 4px;
+    }
+    .star {
+      width: 18px;
+      height: 18px;
+      clip-path: polygon(
+        50% 0%, 61% 35%, 98% 35%, 
+        68% 57%, 79% 91%, 50% 70%, 
+        21% 91%, 32% 57%, 2% 35%, 
+        39% 35%
+      );
+      background: #444;
+    }
+    .star.filled {
+      background: gold;
+    }
+
+    .tags {
+      margin-top: 6px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+    }
+
+    .tag {
+      padding: 4px 10px;
+      font-size: 0.8rem;
+      border-radius: 6px;
+      background: #333;
+      white-space: nowrap;
+    }
+
+    /* Contenedor solo para la sinopsis */
+    .sinopsis {
+      font-size: 0.95rem;
+      line-height: 1.5;
+      text-align: justify;
+    }
+    .sinopsis h3 {
+      margin-top: 0;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+
+    <!-- Reproductor arriba (iframe en 16:9) -->
+    <div class="video-container">
+      <iframe src="https://play.tecnofire.pro/streamwish.php?url=https://streamwish.to/e/ajo1vk5f2lo5" allowfullscreen></iframe>
+    </div>
+
+    <!-- Bloque 1: Póster + info -->
+    <div class="card">
+      <div class="card-header">
+        <img src="https://image.tmdb.org/t/p/original/wpMaI2J3ISYZiaIWNkoA1lVb5LQ.jpg" alt="Batman Azteca">
+        <div class="card-info">
+          <h2>Batman Azteca: Choque de imperios</h2>
+          <p><strong>Duración:</strong> 89 minutos | <strong>Año:</strong> 2025</p>
+          
+          <!-- Estrellas -->
+          <div class="rating">
+            <div class="star filled"></div>
+            <div class="star filled"></div>
+            <div class="star filled"></div>
+            <div class="star filled"></div>
+            <div class="star"></div>
+            <span style="margin-left:8px; font-size:0.9rem; color:#bbb;">8.5</span>
+          </div>
+
+          <!-- Etiquetas -->
+          <div class="tags">
+            <span class="tag">Animación</span>
+            <span class="tag">Acción</span>
+            <span class="tag">Aventura</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bloque 2: Sinopsis -->
+    <div class="card">
+      <div class="sinopsis">
+        <h3>Sinopsis</h3>
+        <p>
+          En la época del imperio azteca, la tragedia azota a Yohualli Coatl cuando su padre es asesinado por conquistadores españoles. Para advertir al rey Moctezuma y a su sumo sacerdote, Yoka, del peligro inminente, Yohualli escapa a Tenochtitlán. Allí, se entrena en el templo del dios murciélago Tzinacán con su mentor, desarrollando equipo y armamento para enfrentar la invasión española y vengar la muerte de su padre. En el camino, se encuentra con figuras clave como la feroz Mujer Jaguar y el conquistador Hernán Cortés.
+        </p>
+      </div>
+    </div>
+
+  </div>
+
+</body>
+</html>
